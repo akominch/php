@@ -9,28 +9,62 @@
     <database-model serializer="dbm" rdbms="MYSQL" format-version="2.4">
       <schema id="1" name="myshop"/>
       <table id="2" parent="1" name="categories"/>
-      <column id="3" parent="2" name="id">
+      <table id="3" parent="1" name="products"/>
+      <column id="4" parent="2" name="id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="4" parent="2" name="parent_id">
+      <column id="5" parent="2" name="parent_id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="5" parent="2" name="name">
+      <column id="6" parent="2" name="name">
         <mandatory>1</mandatory>
         <data-type>varchar(30)</data-type>
       </column>
-      <index id="6" parent="2" name="name">
+      <index id="7" parent="2" name="name">
         <columns>name</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <key id="7" parent="2" name="name">
+      <key id="8" parent="2" name="name">
         <columns>name</columns>
         <underlying-index>name</underlying-index>
       </key>
-      <key id="8" parent="2" name="PRIMARY">
+      <key id="9" parent="2" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="10" parent="3" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="11" parent="3" name="category_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="12" parent="3" name="name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="13" parent="3" name="description">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="14" parent="3" name="price">
+        <mandatory>1</mandatory>
+        <data-type>float</data-type>
+      </column>
+      <column id="15" parent="3" name="image">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="16" parent="3" name="status">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(4)</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <key id="17" parent="3" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
