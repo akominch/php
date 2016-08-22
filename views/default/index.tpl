@@ -6,4 +6,8 @@
         </a><br />
         <a href="/products/{$item['id']}">{$item['name']}</a>
     </div>
+
+    {if $smarty.foreach.products.iteration mod 3 == 0}
+        <div style="clear: both;"></div>
+    {/if}
 {/foreach}
