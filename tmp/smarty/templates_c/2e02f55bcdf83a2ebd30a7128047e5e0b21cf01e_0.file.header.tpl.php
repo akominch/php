@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-07-08 13:31:59
+/* Smarty version 3.1.29, created on 2016-08-22 08:37:49
   from "/Volumes/data/SITES/php.loc/views/default/header.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_577f811f7ccf31_84752554',
+  'unifunc' => 'content_57ba8fad854c33_08275069',
   'file_dependency' => 
   array (
     '2e02f55bcdf83a2ebd30a7128047e5e0b21cf01e' => 
     array (
       0 => '/Volumes/data/SITES/php.loc/views/default/header.tpl',
-      1 => 1467973915,
+      1 => 1471844269,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:leftcolumn.tpl' => 1,
   ),
 ),false)) {
-function content_577f811f7ccf31_84752554 ($_smarty_tpl) {
+function content_57ba8fad854c33_08275069 ($_smarty_tpl) {
 ?>
 <!doctype html>
 <html lang="ru">
@@ -41,6 +41,5 @@ css/main.css" type="text/css">
 
 
 <div id="centerColumn">
-    centerColumn
 <?php }
 }

@@ -1,7 +1,7 @@
 </div>{*/centerColumn*}
 
 <div id="footer">
-    Footer
+    Footer.tpl
 </div>
 </body>
 </html>
