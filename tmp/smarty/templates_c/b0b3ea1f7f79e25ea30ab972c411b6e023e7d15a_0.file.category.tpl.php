@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-08-23 14:48:34
-  from "/Volumes/data/SITES/php.loc/views/default/index.tpl" */
+/* Smarty version 3.1.29, created on 2016-08-23 15:58:21
+  from "/Volumes/data/SITES/php.loc/views/default/category.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_57bc3812893ac7_64988570',
+  'unifunc' => 'content_57bc486d4baba1_10892546',
   'file_dependency' => 
   array (
-    'b3bec4805c477c2b92d2c369487e7b248656edd1' => 
+    'b0b3ea1f7f79e25ea30ab972c411b6e023e7d15a' => 
     array (
-      0 => '/Volumes/data/SITES/php.loc/views/default/index.tpl',
-      1 => 1471872585,
+      0 => '/Volumes/data/SITES/php.loc/views/default/category.tpl',
+      1 => 1471957094,
       2 => 'file',
     ),
   ),
@@ -19,8 +19,10 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_57bc3812893ac7_64988570 ($_smarty_tpl) {
+function content_57bc486d4baba1_10892546 ($_smarty_tpl) {
 ?>
+<h1>Товары категории <?php echo $_smarty_tpl->tpl_vars['rsCategory']->value['name'];?>
+</h1>
 
 <?php
 $_from = $_smarty_tpl->tpl_vars['rsProducts']->value;
@@ -58,6 +60,29 @@ $_smarty_tpl->tpl_vars['__smarty_foreach_products'] = $__foreach_products_0_save
 }
 if ($__foreach_products_0_saved_item) {
 $_smarty_tpl->tpl_vars['item'] = $__foreach_products_0_saved_item;
+}
+?>
+
+<?php
+$_from = $_smarty_tpl->tpl_vars['rsChildCats']->value;
+if (!is_array($_from) && !is_object($_from)) {
+settype($_from, 'array');
+}
+$__foreach_childCats_1_saved_item = isset($_smarty_tpl->tpl_vars['item']) ? $_smarty_tpl->tpl_vars['item'] : false;
+$_smarty_tpl->tpl_vars['item'] = new Smarty_Variable();
+$_smarty_tpl->tpl_vars['item']->_loop = false;
+foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
+$_smarty_tpl->tpl_vars['item']->_loop = true;
+$__foreach_childCats_1_saved_local_item = $_smarty_tpl->tpl_vars['item'];
+?>
+    <h2><a href="/category/<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+"><?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
+</a></h2>
+<?php
+$_smarty_tpl->tpl_vars['item'] = $__foreach_childCats_1_saved_local_item;
+}
+if ($__foreach_childCats_1_saved_item) {
+$_smarty_tpl->tpl_vars['item'] = $__foreach_childCats_1_saved_item;
 }
 }
 }
